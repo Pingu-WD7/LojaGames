@@ -32,6 +32,6 @@ public class JogoService {
         return repository.findById(id).orElseThrow(() -> new RuntimeException(" Jogo n encontrado"));
     }
     public List<Jogo> buscarPorNome(String nome){
-        return repository.findBynomeContainingIgnoreCase(nome);
+        return repository.findByNomeContainingIgnoreCase(nome);
     }
 }
